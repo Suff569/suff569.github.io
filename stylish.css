@@ -1,0 +1,188 @@
+@font-face{
+
+font-family: 'Pusia';
+
+src: url('https://suff569.github.io/Pusia-Bold.eot');
+
+src: url('https://suff569.github.io/Pusia-Bold.eot?iefix') format('eot'),
+
+url('https://suff569.github.io/Pusia-Bold.woff') format('woff'),
+
+url('https://suff569.github.io/Pusia-Bold.ttf') format('truetype'),
+
+url('https://suff569.github.io/Pusia-Bold.svg#webfont') format('svg');
+
+font-weight: normal;
+
+font-style: normal;
+
+}
+
+@media (max-width: 1050px) {
+ul.npcatalog li {
+    line-height: 32px;
+}
+}
+
+@media (max-width: 1050px) {
+.clothing .clothing__field_left ul.npcatalog {
+   
+    width: 227px;
+}
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, .hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-family: Pusia;
+
+}
+
+.siteHeader__block {
+    background: #000;
+}
+
+.siteHeader__underHeader {
+display: none!important;
+
+}
+
+.siteHeaderMobile__visual-bottom {
+display: none!important;
+
+}
+
+.siteHeaderMobile__menu-discont {
+    display:none!important;
+}
+
+.siteHeader__topCenter {
+    width: 47%;
+    display: none!important;
+}
+
+.siteHeader__bottomCenter {
+
+    display: none!important;
+}
+
+.siteHeader__yourDesign {
+    display: none!important;
+
+}
+
+.siteHeader__catalogViewer {
+
+    width: 50%!important;
+}
+
+
+.siteHeader__container-cart {
+  
+    width: 50%!important;
+}
+
+.siteHeader__topContainer {
+    
+    margin-left: 50%!important;
+}
+
+.siteHeader__siteLogo a {
+   
+    margin-left: 88%!important;
+}
+
+.siteHeader__container-account {
+    display: none;
+    vertical-align: middle;
+}
+
+a.siteHeaderMobile__logo {
+margin-left: 0%!important;
+}
+
+
+.no-js .owl-carousel, .owl-carousel.owl-loaded {
+    display: none;
+}
+
+.nppage__main {
+    margin-top: 30px;
+    background: url(https://brawlstars.myprintbar.ru/upload/partners/images/9015051….png);
+}
+
+.sc-see-also {
+    border: 1px solid #d7d7d7;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: none;
+}
+
+.npbtn__round.blue {
+    border: 2px solid #0054a6;
+    color: #0054a6;
+    display: none;
+}
+
+.npbtn__round.light-blue {
+    border: 2px solid #00acc8;
+    color: #00acc8;
+    display: none;
+}
+
+.feature_header {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    color: #4f4f4f;
+    text-align: center;
+    padding: 12px 0;
+    margin: 0 9px;
+    border-bottom: 1px solid #f2f2f2;
+    display: none;
+}
+
+.owl-carousel.owl-loaded {
+    display: none;
+}
+
+.siteHeaderMobile__visual-top {
+    z-index: 1000;
+    width: 100vw;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(https://raw.githubusercontent.com/Suff569/suff569.github.io/master/headerfon.png);
+}
+
+.npcatalog li a {
+    color: #f3f3f3;
+    position: relative;
+    padding-left: 30px;
+    display: block;
+    text-shadow: black 1px 1px 4px;
+    font-size: 20px;
+}
+
+.clothing_ltitle {
+    text-transform: uppercase;
+    font-size: 27px;
+    padding-left: 25px;
+    margin: 40px 0;
+}
+
+.siteHeader__catalogNav {
+
+    z-index: 4;
+    
+}
+
+.npcatalog li a { 
+    background: url(https://raw.githubusercontent.com/Suff569/suff569.github.io/master/menulogo.png);
+    background-repeat-x: no-repeat;
+}
+
+.owl-carousel.owl-loaded>div {
+    display: none;
+}
