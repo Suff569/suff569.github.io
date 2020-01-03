@@ -191,3 +191,20 @@ margin-left: 0%!important;
 
     z-index: 1002;
 }
+
+.npsex {
+    float: left;
+    FONT-SIZE: 18PX;
+}
+
+.npfilter .npselect {
+    margin-left: 10px;
+    font-size: 19px;
+}
+
+.npselect__types {
+    min-width: 442px!important;
+    font-size: 0;
+    text-align: left!important;
+    padding: 10px 0;
+}
