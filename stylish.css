@@ -145,7 +145,7 @@ margin-left: 0%!important;
 }
 
 .owl-carousel.owl-loaded {
-    display: none;
+    display: block;
 }
 
 .siteHeaderMobile__visual-top {
