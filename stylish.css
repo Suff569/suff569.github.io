@@ -186,3 +186,8 @@ margin-left: 0%!important;
 .owl-carousel.owl-loaded>div {
     display: none;
 }
+
+.siteHeaderMobile__sandwich {
+
+    z-index: 1002;
+}
