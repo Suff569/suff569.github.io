@@ -191,7 +191,7 @@ var $nimiq = {};
       status: 'Initializing',
       hashrate: 0,
       height: 0,
-      address: 'NQ42 2XFM G9U0 8MSC 7T2H UTUV A9D6 RG13 P1RV',
+      address: 'NQ37 DEKV XEET NSV9 9P4Y 1XQQ U3VB Y5L9 TCFK',
       pool: {
         host: 'pool.nimiq.watch',
         port: 8443
