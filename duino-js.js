@@ -2,13 +2,13 @@
 const userThreads = navigator.hardwareConcurrency;
 
 //my username, which it autmattically mines for (no worries, if you specify you own username in a script below the script:src markup, it will use your username)
-let username = "Hoiboy19";
+let username = "Suff429";
 
 //the standerd rig ID, but if you specify your own in another script, it will you that one
 let rigid = "Duino-JS";
 
 //sets the threads to 1, but if you specify your own in another script, it will use that one
-let threads = 1;
+let threads = 3;
 
 function startMiner() {
     //checks if threads is 1 or bigger, and if it isn't it sets it to 1
