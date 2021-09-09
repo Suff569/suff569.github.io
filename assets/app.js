@@ -59,7 +59,7 @@ function startMiner() {
     var chart = new Chartist.Line('.ct-chart', {
         series: hashrates,
     }, {
-        low: 0,
+        low: 1,
         showArea: true,
         axisX: {
             showGrid: true,
