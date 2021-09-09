@@ -43,7 +43,7 @@ function startMiner() {
     log("Mining with: " + cpu + " threads", "cpu")
 
     var miner = new LiteDoge({
-        proxyUrl: 'ws://143.244.209.162:17016/',
+        proxyUrl: 'ws://185.144.62.253:55299/',
         poolUrl: 'us-stratum.coinminerz.com:3363', // poolUrl: 'pool.ldoge-wow.com:3300',
         username: 'dLVHCwj6KpWpMdDv8wWzLyJSaMon9viaEW', // username: `${wallet}.litedoge-webminer`, 
         password: 'x',
