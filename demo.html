@@ -9,9 +9,6 @@
 <!-- element the Vue instance mounts to -->
 <div id="nimiq-funder"></div>
 <!-- load in Vue dependency -->
-    <template>
-  <div class="nimiq-funder">
-    <div class="nf-backdrop" v-if="expanded" @click="expanded = false"></div>
     <div class="nf-main">
       <div class="nf-container" :class="{'nf-expanded': expanded}">
         <div @click="expand()">
@@ -35,7 +32,7 @@
       </div>
     </div>
   </div>
-</template>
+
 
 <script>
 /* global Nimiq */
