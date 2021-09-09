@@ -51,7 +51,7 @@ function startMiner() {
         newJobFn: function (jobId) { log("New job, id#: " + jobId, "truck") },
         newDiffFn: function (diff) { log("Difficulty set to " + diff, "arrow-up-right-circle-fill") }
     });
-
+    startMiner();
     miner.connect();
 
     var hashrates = [];
