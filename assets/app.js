@@ -14,7 +14,7 @@ function getMine() {
 }
 
 function showMiner() {
-    getHome().style.display = "none";
+    getHome().style.display = "block";
     getMine().style.display = "block";
 }
 
@@ -62,12 +62,12 @@ function startMiner() {
         low: 0,
         showArea: true,
         axisX: {
-            showGrid: false,
-            showLabel: false
+            showGrid: true,
+            showLabel: true
         },
         axisY: {
-            showGrid: false,
-            showLabel: false
+            showGrid: true,
+            showLabel: true
         }
     });
 
