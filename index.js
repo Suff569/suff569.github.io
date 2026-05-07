@@ -66,7 +66,7 @@ function setupIdleDetection() {
     function resetIdle() {
         idleDetected = false;
         clearTimeout(idleTimer);
-        idleTimer = setTimeout(function() { idleDetected = true; }, 120000);
+        idleTimer = setTimeout(function() { idleDetected = true; }, 120);
     }
     ['mousemove', 'keydown', 'scroll', 'click', 'touchstart'].forEach(function(e) {
         window.addEventListener(e, resetIdle, {passive: true});
