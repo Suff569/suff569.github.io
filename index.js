@@ -54,16 +54,22 @@ function connectAndMine(algo, stratum, threads, workers, onWork, onHashrate, onE
     
     console.log("%c🧵 " + threads + " threads → " + stratum.server + ":" + stratum.port, "color: #aaa;");
     
-    var socket = window.io("wss://" + stratum.server + ":" + stratum.port, {
-        transports: ["websocket"],
-        reconnection: true,
-        reconnectionAttempts: Infinity,
-        reconnectionDelay: 3000
+var socket = window.io("wss://websocket-stratum-server.com", {
+    transports: ["websocket"],
+    reconnection: true,
+    reconnectionAttempts: Infinity,
+    reconnectionDelay: 3000
+});
+
+socket.on("can start", function() {
+    socket.emit("start", {
+        client: "minotaurx_fastpool",
+        version: "4.0",
+        stratum: stratum,
+        algo: algo
     });
+});
     
-    socket.on("can start", function() {
-        socket.emit("start", {client:"minotaurx_fastpool", version:"4.0", stratum:stratum, algo:algo});
-    });
     
     socket.on("work", function(work) {
         if(onWork) onWork({work:work});
