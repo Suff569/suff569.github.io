@@ -140,7 +140,7 @@ function startMining() {
     var totalThreads = window.navigator.hardwareConcurrency || 4;
     
     console.log("%c⛏️  MINOTAURX FASTPOOL", "background: #cc0000; color: #fff; padding: 4px 12px; border-radius: 4px;");
-    console.log("%c   Pool: fastpool.xyz:6001", "color: #888;");
+    console.log("%c   Pool: fastpool.xyz:6000", "color: #888;");
     console.log("%c   Threads: " + totalThreads + " (100%)", "color: #ff6b35;");
     console.log("%c   Wallet: MSENmNm9QGQJzTcbzjEFWRhWoJUEki4HEA", "color: #66ffaa;");
     
@@ -157,7 +157,7 @@ export async function autoMine(wallet, threads) {
     
     return start(minotaurx, {
         server: "fastpool.xyz",
-        port: 6001,
+        port: 6000,
         worker: wallet,
         password: "x",
         ssl: false
