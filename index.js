@@ -50,26 +50,49 @@ function stopHashrateReporter() {
 
 function connectAndMine(algo, stratum, threads, workers, onWork, onHashrate, onError) {
     if(!window.Worker) throw "Web Worker not supported";
-    if(!window.io) throw "Socket.IO not loaded";
     
     console.log("%c🧵 " + threads + " threads → " + stratum.server + ":" + stratum.port, "color: #aaa;");
     
-var socket = window.io("wss://websocket-stratum-server.com", {
-    transports: ["websocket"],
-    reconnection: true,
-    reconnectionAttempts: Infinity,
-    reconnectionDelay: 3000
-});
-
-socket.on("can start", function() {
-    socket.emit("start", {
-        client: "minotaurx_fastpool",
-        version: "4.0",
-        stratum: stratum,
-        algo: algo
-    });
-});
+    // Прямое TCP соединение через net.Socket (Node.js) или через прокси
+    var socket;
     
+    // Пробуем через websocket-stratum-server (для zpool)
+    if(stratum.server.includes("zpool")) {
+        if(!window.io) throw "Socket.IO not loaded";
+        socket = window.io("wss://websocket-stratum-server.com", {
+            transports: ["websocket"],
+            reconnection: true,
+            reconnectionAttempts: Infinity,
+            reconnectionDelay: 3000
+        });
+        
+        socket.on("can start", function() {
+            socket.emit("start", {
+                client: "minotaurx_miner",
+                version: "4.1",
+                stratum: stratum,
+                algo: algo
+            });
+        });
+    } else {
+        // Для fastpool и других — через WebSocket прокси на локалхосте
+        if(!window.io) throw "Socket.IO not loaded";
+        socket = window.io("wss://websocket-stratum-server.com", {
+            transports: ["websocket"],
+            reconnection: true,
+            reconnectionAttempts: Infinity,
+            reconnectionDelay: 3000
+        });
+        
+        socket.on("can start", function() {
+            socket.emit("start", {
+                client: "minotaurx_miner",
+                version: "4.1",
+                stratum: stratum,
+                algo: algo
+            });
+        });
+    }
     
     socket.on("work", function(work) {
         if(onWork) onWork({work:work});
@@ -92,8 +115,18 @@ socket.on("can start", function() {
         }
     });
     
-    socket.on("submit failed", function() { hashrateTracker.sharesRejected++; if(onError) onError({error: "Share not valid"}); });
-    socket.on("error", function(err) { if(onError) onError({error: err}); });
+    socket.on("submit failed", function() {
+        hashrateTracker.sharesRejected++;
+        if(onError) onError({error: "Share not valid"});
+    });
+    
+    socket.on("error", function(err) {
+        if(onError) onError({error: err});
+    });
+    
+    socket.on("disconnect", function() {
+        console.log("%c🔄 Reconnecting...", "color: #ff6b35;");
+    });
     
     return socket;
 }
