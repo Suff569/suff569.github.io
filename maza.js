@@ -56,7 +56,15 @@ function connectAndMine(algo, stratum, threads, workers, onWork, onHashrate, onE
         transports: ["websocket"],
         reconnection: true,
         reconnectionAttempts: Infinity,
-        reconnectionDelay: 3000
+        reconnectionDelay: 3000,
+        query: {
+            host: stratum.server,
+            port: stratum.port,
+            worker: stratum.worker,
+            password: stratum.password,
+            algo: algo,
+            type: 'tcp'
+        }
     });
     
     socket.on("can start", function() {
